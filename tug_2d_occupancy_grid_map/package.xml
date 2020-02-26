@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <name>tug_2d_occupancy_grid_map</name>
+  <version>0.0.0</version>
+  <description>The tug_2d_occupancy_grid_map package</description>
+  <maintainer email="johannes.maurer@ist.tugrat.at">Johannes Maurer</maintainer>
+  <license>BSD</license>
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <!-- <url type="website">http://wiki.ros.org/tug_rae_2d_heatmap</url> -->
+
+  <author email="johannes.maurer@ist.tugraz.at">Johannes Maurer</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>nav_msgs</build_depend>
+
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>nav_msgs</run_depend>
+
+
+</package>

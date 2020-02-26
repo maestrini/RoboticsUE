@@ -1,0 +1,8 @@
+#goal definition
+int32 number
+---
+#result definition
+int32 factorial
+---
+#feedback
+int32 iteration

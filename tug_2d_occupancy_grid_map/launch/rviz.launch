@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+ 
+    <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find tug_2d_occupancy_grid_map)/launch/rviz.rviz"/>
+
+</launch>

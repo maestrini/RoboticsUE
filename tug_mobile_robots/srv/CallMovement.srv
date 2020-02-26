@@ -1,0 +1,8 @@
+int32 POSITION_MODE = 0
+int32 VELOCITY_MODE = 1
+int32 WHEEL_MODE = 2
+int32 ACKERMANN_MODE=3
+
+int32 mode
+---
+

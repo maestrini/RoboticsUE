@@ -1,0 +1,6 @@
+<launch>
+
+<node pkg="tug_ros_examples" type="talker_node" name="talker1" />
+<node pkg="tug_ros_examples" type="listener_node" name="listener1" />
+
+</launch>

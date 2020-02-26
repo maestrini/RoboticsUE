@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+ 
+    <node pkg="tug_mobile_robots" type="mobile_robots_node" name="mobile_robots_node" output="screen" />
+
+</launch>

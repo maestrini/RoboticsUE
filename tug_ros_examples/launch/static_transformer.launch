@@ -1,0 +1,7 @@
+<launch>
+
+	<node pkg="tf" type="static_transform_publisher" name="tf_broadcaster1" args="1 0 0 0 0.7 0.7 parent_frame frame 100" />
+	<node pkg="tf" type="static_transform_publisher" name="tf_broadcaster2" args="1 0 0 0 1.57 0 grandparent_frame parent_frame 100" />
+	<node pkg="tf" type="static_transform_publisher" name="tf_broadcaster3" args="1 0 0 1.57 0 0 grandgrandparent_frame grandparent_frame 100" />
+
+</launch>
