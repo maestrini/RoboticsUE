@@ -120,7 +120,7 @@ void MobileRobotsNode::step()
             step_count_++;
         }
     case CallMovementRequest::ACKERMANN_MODE:
-        if(step_count_ < robot_wheel_vels_.size())
+        if(step_count_ < robot_ackermann_cmds_.size())
         {
             Vector2d ackermann_cmd = robot_ackermann_cmds_[step_count_];
 
