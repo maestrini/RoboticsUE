@@ -86,6 +86,16 @@ target_link_libraries(listener_node
 )
 
 ## Declare a cpp executable
+add_executable(converter_node
+  src/converter.cpp
+)
+
+## Specify libraries to link a library or executable target against
+target_link_libraries(converter_node
+  ${catkin_LIBRARIES}
+)
+
+## Declare a cpp executable
 add_executable(add_two_numbers_client
   src/AddTwoNumbersClient.cpp
 )
