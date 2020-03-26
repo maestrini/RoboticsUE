@@ -145,12 +145,6 @@ void SimpleTurtle::sensorStateCallback(const kobuki_msgs::SensorState::ConstPtr&
 {
     ROS_INFO_STREAM("left encoder= " << msg->left_encoder);
     ROS_INFO_STREAM("right encoder= " << msg->right_encoder);
-    
-    // MAKE YOUR CHANGES HERE
-    
-    // don't forget to call publishTramsform at the end
-    
-    // LOG YOUR ODOMETRY DATA
 }
 
 
@@ -184,9 +178,12 @@ void SimpleTurtle::dump_odom()
 	odomfile << "happy logging\n";
 }
 
-void SimpleTurtle::publishTramsform(tf::Transform t)
+void SimpleTurtle::publishTramsform(tf::Vector3 translation, tf::Quaternion rotation)
 {
-	br.sendTransform(tf::StampedTransform(t, ros::Time::now(), "odom", "kmr"));
+	tf::Transform t;
+	t.setOrigin(translation);
+	t.setRotation(rotation);
+	br.sendTransform(tf::StampedTransform(t, ros::Time::now(), "odom", "my_base"));
 }
 
 // step function

@@ -123,7 +123,7 @@ protected:
     
     void odomCallback(const nav_msgs::Odometry::ConstPtr& msg);
    
-    void publishTramsform(tf::Transform t);
+    void publishTramsform(tf::Vector3 translation, tf::Quaternion rotation);
     
     void dump_pose();
     void dump_odom();
