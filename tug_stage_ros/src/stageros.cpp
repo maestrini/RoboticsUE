@@ -437,7 +437,7 @@ StageNode::WorldCallback()
         tf::Quaternion laserQ;
         laserQ.setRPY(M_PI, 0.0, lp.a);
         tf::Transform txLaser =  tf::Transform(laserQ,
-                                               tf::Point(lp.x, lp.y, 0.0));
+                                               tf::Point(lp.x, lp.y, 0.05));
         tf.sendTransform(tf::StampedTransform(txLaser, sim_time,
                                               mapName("mounting_plate", r),
                                               mapName("base_laser_link", r)));
