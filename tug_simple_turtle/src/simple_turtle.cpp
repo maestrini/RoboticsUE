@@ -163,27 +163,26 @@ void SimpleTurtle::odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
 // Scan Matcher Pose
 void SimpleTurtle::poseCallback(const geometry_msgs::Pose2D::ConstPtr& msg)
 {
-  ROS_INFO("pose");
-  // LOG THE LASER POSE
+    ROS_INFO("pose");
 }
 
 
 void SimpleTurtle::dump_pose()
 {
-	posefile << "happy logging\n";
+    posefile << "happy logging\n";
 }
 
 void SimpleTurtle::dump_odom()
 {
-	odomfile << "happy logging\n";
+    odomfile << "happy logging\n";
 }
 
 void SimpleTurtle::publishTramsform(tf::Vector3 translation, tf::Quaternion rotation)
 {
-	tf::Transform t;
-	t.setOrigin(translation);
-	t.setRotation(rotation);
-	br.sendTransform(tf::StampedTransform(t, ros::Time::now(), "odom", "my_base"));
+    tf::Transform t;
+    t.setOrigin(translation);
+    t.setRotation(rotation);
+    br.sendTransform(tf::StampedTransform(t, ros::Time::now(), "odom", "my_base"));
 }
 
 // step function
@@ -192,14 +191,11 @@ void SimpleTurtle::step()
 {
     if(button_0_pressed_)
     {
-        // MAKE YOUR CHANGES HERE
-        
         linear_ = 0.0;
         angular_ = 0.0;
 
         pubCmdVel(linear_,angular_);
         pubCmdVel(linear_,angular_);
-        
     }
 }
 
